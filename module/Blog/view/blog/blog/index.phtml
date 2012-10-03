@@ -1,0 +1,18 @@
+<?php
+// module/Blog/view/blog/blog/index.phtml:
+
+$title = 'My blog';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<p>
+    <a href="<?php echo $this->url('blog', array('action'=>'add'));?>">Add new blog post</a>
+</p>
+<?php foreach ($posts as $post): ?>
+<div>            
+<h2> <?php echo $this->escapeHtml($post->title); ?> </h2>
+    <p> 
+        <?php echo $this->escapeHtml($post->body); ?> 
+    </p>
+</div>
+<?php endforeach; ?>
