@@ -1,5 +1,5 @@
-A simple blog created with Zend Framework 2 + Doctrine ODM + MongoDB 
-====================================================================
+A simple blog
+=============
 
 Introduction
 ------------
