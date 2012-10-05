@@ -15,3 +15,8 @@ Clone the repository and run
 
 to install Zend Framework 2 and Doctrine ODM Modules
 
+License
+-------
+
+New BSD License
+
