@@ -26,7 +26,8 @@ class BlogForm extends Form
             'name' => 'body',
             'attributes' => array(
                 'type'  => 'textarea',
-                'rows' => 5,
+                'class' => 'textarea',
+                'style' => "width: 810px; height: 200px",
             ),
             'options' => array(
                 'label' => 'Body',

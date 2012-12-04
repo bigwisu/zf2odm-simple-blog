@@ -3,6 +3,15 @@
 
 $title = 'Add new blog post';
 $this->headTitle($title);
+
+
+echo $this->headLink()->offsetSetStylesheet(30,$this->basePath() . '/css/prettify.css')
+                      ->offsetSetStylesheet(40,$this->basePath() . '/css/bootstrap-wysihtml5.css');
+
+echo $this->headScript()->offsetSetFile(30,$this->basePath() . '/js/prettify.js')
+                        ->offsetSetFile(40,$this->basePath() . '/js/wysihtml5-0.3.0.js')
+                        ->offsetSetFile(50,$this->basePath() . '/js/bootstrap-wysihtml5.js')
+
 ?>
 <h1><?php echo $this->escapeHtml($title); ?></h1>
 <?php
@@ -17,3 +26,19 @@ echo $this->formRow($form->get('body'));
 echo $this->formSubmit($form->get('submit'));
 echo $this->form()->closeTag();
 ?>
+
+<script>
+	$('.textarea').wysihtml5({
+            "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+            "emphasis": true, //Italics, bold, etc. Default true
+            "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+            "html": false, //Button which allows you to edit the generated HTML. Default false
+            "link": true, //Button to insert a link. Default true
+            "image": true, //Button to insert an image. Default true,
+            "color": false //Button to change color of font
+        });
+</script>
+
+<script type="text/javascript" charset="utf-8">
+	$(prettyPrint);
+</script>
